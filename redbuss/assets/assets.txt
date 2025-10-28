@@ -1,0 +1,6 @@
+bus banner: https://s3.rdbuz.com/Images/responsiveweb/HomeBanner.webp
+train banner: https://www.redbus.in/rails/public/images/banner.svg
+
+main logo: https://res.cloudinary.com/dgz5jcnzj/image/upload/v1761630253/kzh5pk7ikt1sy5uaxgng.png
+bus logo: https://res.cloudinary.com/dgz5jcnzj/image/upload/v1761630253/kzh5pk7ikt1sy5uaxgng.png
+train logo: https://res.cloudinary.com/dgz5jcnzj/raw/upload/v1761630329/p6bncz00l9fchf7rwopj

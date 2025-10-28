@@ -13,9 +13,8 @@
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <img src="https://via.placeholder.com/80x30?text=redBus" alt="RedBus Logo" class="logo">
-            <img src="https://via.placeholder.com/80x30?text=redRail" alt="RedRail Logo" class="logo">
-            <img src="https://via.placeholder.com/80x30?text=Train+tickets" alt="Train tickets" class="logo">
+            <img src="https://res.cloudinary.com/dgz5jcnzj/image/upload/v1761630253/kzh5pk7ikt1sy5uaxgng.png" alt="RedBus Logo" class="logo">
+            <img src="https://res.cloudinary.com/dgz5jcnzj/raw/upload/v1761630329/p6bncz00l9fchf7rwopj" alt="RedRail Logo" class="logo">
         </div>
         <div class="nav-links">
             <a href="#"><i>☰</i> Bookings</a>
@@ -25,7 +24,7 @@
     </header>
 
     <!-- Hero Banner -->
-    <section class="hero">
+    <section class="hero" style="background-image: url('https://s3.rdbuz.com/Images/responsiveweb/HomeBanner.webp');">
         <h1>India's No.1 online<br>bus ticket booking site</h1>
         <div class="search-box">
             <div class="from-to">
@@ -420,33 +419,7 @@
         </div>
     </footer>
 
-    <script>
-        // Simple FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const answer = item.nextElementSibling;
-                const isActive = item.classList.contains('active');
 
-                // Close all
-                document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
-                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-
-                // Open clicked one
-                if (!isActive) {
-                    item.classList.add('active');
-                    answer.style.display = 'block';
-                }
-            });
-        });
-
-        // Tab switching (for Offers)
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-            });
-        });
-    </script>
 
 </body>
 
