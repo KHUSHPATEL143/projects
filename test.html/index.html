@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="nav-bar">
+            <h2 class="portal-title">Student Portal</h2>
+            <nav class="nav-links">
+                <a href="./index.html" class="nav-link active">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a href="./assigned.html" class="nav-link">
+                    <span class="icon">📝</span> Assigned Tests
+                </a>
+                <a href="./completed.html" class="nav-link selected">
+                    <span class="icon">✅</span> Completed Tests
+                </a>
+            </nav>
+            <button class="logout-btn">
+                <span class="icon">→</span> Logout
+            </button>
+        </aside>
+
+        <main class="dashboard-content">
+            <header>
+                <h1>Student Dashboard</h1>
+                <p class="realtime-status">
+                    <span class="status-dot"></span> Real-time connected
+                </p>
+            </header>
+
+            <section class="summary-cards">
+                <div class="card summary-card">
+                    <p class="card-title">Total Assigned Tests</p>
+                    <p class="card-value">0</p>
+                </div>
+                <div class="card summary-card">
+                    <p class="card-title">Completed Tests</p>
+                    <p class="card-value">6</p>
+                </div>
+            </section>
+
+            <section class="upcoming-tests">
+                <h2>Upcoming Tests</h2>
+                <div class="card empty-state">
+                    No upcoming tests found.
+                </div>
+            </section>
+
+            <section class="recent-activity">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="card activity-item">
+                        <span class="check-icon">✅</span>
+                        Completed test: **30 Sep**
+                        <span class="days-ago">27 days ago</span>
+                    </div>
+                    <div class="card activity-item">
+                        <span class="check-icon">✅</span>
+                        Completed test: **C Language 24 Sep 2024**
+                        <span class="days-ago">33 days ago</span>
+                    </div>
+                    <div class="card activity-item">
+                        <span class="check-icon">✅</span>
+                        Completed test: **CG SU CSS TEST 16 Sep**
+                        <span class="days-ago">42 days ago</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Completed Tests</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="nav-bar">
+            <h2 class="portal-title">Student Portal</h2>
+            <nav class="nav-links">
+                <a href="./index.html" class="nav-link active">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a href="./assigned.html" class="nav-link">
+                    <span class="icon">📝</span> Assigned Tests
+                </a>
+                <a href="./completed.html" class="nav-link selected">
+                    <span class="icon">✅</span> Completed Tests
+                </a>
+            </nav>
+            <button class="logout-btn">
+                <span class="icon">→</span> Logout
+            </button>
+        </aside>
+
+        <main class="dashboard-content table-page">
+            <h1>Completed Tests</h1>
+
+            <div class="results-table-container">
+                <table class="test-results-table">
+                    <thead>
+                        <tr>
+                            <th class="col-test-name">Test Name</th>
+                            <th class="col-score">Score</th>
+                            <th class="col-feedback">Feedback</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>30 Sep</td>
+                            <td>
+                                <span class="score-badge fail">27%</span>
+                            </td>
+                            <td>No feedback yet</td>
+                        </tr>
+                        <tr>
+                            <td>C Language 24 Sep 2024</td>
+                            <td>
+                                <span class="score-badge pass">81%</span>
+                            </td>
+                            <td>No feedback yet</td>
+                        </tr>
+                        <tr>
+                            <td>CG SU CSS TEST 16 Sep</td>
+                            <td>
+                                <span class="score-badge pass">72%</span>
+                            </td>
+                            <td>No feedback yet</td>
+                        </tr>
+                        <tr>
+                            <td>CG C TEST 1</td>
+                            <td>
+                                <span class="score-badge pass">85%</span>
+                            </td>
+                            <td>No feedback yet</td>
+                        </tr>
+                        <tr>
+                            <td>CG HTML TEST 1</td>
+                            <td>
+                                <span class="score-badge pass">70%</span>
+                            </td>
+                            <td>No feedback yet</td>
+                        </tr>
+                        <tr>
+                            <td>CG GIT Test 1</td>
+                            <td>
+                                <span class="score-badge pass">77%</span>
+                            </td>
+                            <td>No feedback yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

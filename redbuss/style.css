@@ -1,0 +1,646 @@
+ <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      padding: 12px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-container {
+      display: flex;
+      gap: 15px;
+    }
+
+    .logo {
+      height: 30px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-links a:hover {
+      color: #e31e25;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1600x400?text=Hero+Image') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 60px 5% 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .search-box {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .from-to {
+      display: flex;
+      gap: 15px;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .input-field {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .input-field img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .input-field input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .date-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .date-input {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      font-size: 14px;
+    }
+
+    .quick-date {
+      padding: 8px 15px;
+      background: #ffebee;
+      border-radius: 20px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .booking-for-women {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 20px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #e31e25;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
+    .search-btn {
+      background: #e31e25;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .search-btn:hover {
+      background: #c11a1f;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 50px 5%;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .section-subtitle {
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    /* Book Trains Section */
+    .book-trains {
+      background: #f5f5f5;
+      padding: 30px 5%;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .book-trains-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .train-icon {
+      width: 40px;
+      height: 40px;
+      background: #e31e25;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .book-trains-offer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .offer-code {
+      font-weight: bold;
+      color: #e31e25;
+    }
+
+    .month-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .month-btn {
+      padding: 12px 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .month-btn.active {
+      border-color: #e31e25;
+      color: #e31e25;
+    }
+
+    .book-now-btn {
+      background: #ffebee;
+      color: #e31e25;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Offers Section */
+    .offers-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 8px 15px;
+      background: #eee;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .tab.active {
+      background: #ffebee;
+      color: #e31e25;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .offer-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .offer-type {
+      background: #e31e25;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .offer-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .offer-valid {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .offer-code-tag {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: #e31e25;
+      font-weight: bold;
+    }
+
+    /* What's New */
+    .whats-new-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .new-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .new-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Government Buses */
+    .gov-buses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gov-bus-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .gov-bus-header {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f9f9f9;
+    }
+
+    .gov-bus-logo {
+      width: 40px;
+      height: 40px;
+      background: #ddd;
+      border-radius: 5px;
+    }
+
+    .gov-bus-name {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .gov-bus-rating {
+      background: green;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .gov-bus-desc {
+      padding: 15px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .gov-bus-footer {
+      padding: 10px 15px;
+      background: #ffebee;
+      font-size: 12px;
+      color: #e31e25;
+      font-weight: bold;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+    }
+
+    .testimonial-role {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* App Download */
+    .app-download {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      background: #eee;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-info {
+      flex: 1;
+    }
+
+    .app-rating {
+      font-weight: bold;
+      color: #e31e25;
+    }
+
+    .download-btn {
+      background: #ffebee;
+      color: #e31e25;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Why Choose / How to Book / FAQ */
+    .content-section {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .content-section h3 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .content-section ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .content-section li {
+      margin-bottom: 8px;
+    }
+
+    /* FAQ Accordion */
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .faq-answer {
+      margin-top: 10px;
+      display: none;
+      padding: 10px 0;
+      color: #555;
+    }
+
+    .faq-question:after {
+      content: '+';
+      font-size: 20px;
+      color: #777;
+    }
+
+    .faq-question.active:after {
+      content: '-';
+    }
+
+    /* Footer */
+    footer {
+      background: #f0f0f0;
+      padding: 40px 5%;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .footer-logo {
+      width: 80px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .from-to {
+        flex-direction: column;
+      }
+
+      .date-section {
+        width: 100%;
+      }
+
+      .book-trains-offer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .app-download {
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>

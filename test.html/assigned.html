@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Tests</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="nav-bar">
+            <h2 class="portal-title">Student Portal</h2>
+            <nav class="nav-links">
+                <a href="./index.html" class="nav-link active">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a href="./assigned.html" class="nav-link">
+                    <span class="icon">📝</span> Assigned Tests
+                </a>
+                <a href="./completed.html" class="nav-link selected">
+                    <span class="icon">✅</span> Completed Tests
+                </a>
+            </nav>
+            <button class="logout-btn">
+                <span class="icon">→</span> Logout
+            </button>
+        </aside>
+
+        <main class="dashboard-content tests-page">
+            <header class="tests-header">
+                <div class="page-title">
+                    <span class="title-icon">📄</span>
+                    <h1>Tests</h1>
+                </div>
+                <p class="summary">6 total assignments · 6 showing</p>
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search tests...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <button class="filter-btn">
+                        <span class="filter-icon">▼</span> Filter
+                    </button>
+                </div>
+            </header>
+
+            <section class="test-cards-grid">
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3 class="test-name">30 Sep</h3>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="test-details">
+                        <p><span>Type:</span> Mcq</p>
+                        <p><span>Time Limit:</span> 30 minutes</p>
+                        <p><span>Start Time:</span> Sep 30, 2025, 04:00 PM</p>
+                        <p><span>Duration:</span> 240 minutes</p>
+                        <p><span>Questions:</span> 0</p>
+                    </div>
+                    <button class="view-results-btn">View Results</button>
+                    <div class="test-card-footer">
+                        Started: 9/30/2025<br>
+                        Completed: 9/30/2025
+                    </div>
+                </div>
+
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3 class="test-name">C Language 24 Sep 2024</h3>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="test-details">
+                        <p><span>Type:</span> Coding</p>
+                        <p><span>Time Limit:</span> 60 minutes</p>
+                        <p><span>Start Time:</span> Sep 24, 2025, 11:50 AM</p>
+                        <p><span>Duration:</span> 300 minutes</p>
+                        <p><span>Questions:</span> 0</p>
+                    </div>
+                    <button class="view-results-btn">View Results</button>
+                    <div class="test-card-footer">
+                        Started: 9/24/2025<br>
+                        Completed: 9/24/2025
+                    </div>
+                </div>
+
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3 class="test-name">CG SU CSS TEST 16 Sep</h3>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="test-details">
+                        <p><span>Type:</span> Mcq</p>
+                        <p><span>Time Limit:</span> 25 minutes</p>
+                        <p><span>Start Time:</span> Sep 16, 2025, 09:20 AM</p>
+                        <p><span>Duration:</span> 25 minutes</p>
+                        <p><span>Questions:</span> 0</p>
+                    </div>
+                    <button class="view-results-btn">View Results</button>
+                    <div class="test-card-footer">
+                        Started: 9/16/2025<br>
+                        Completed: 9/16/2025
+                    </div>
+                </div>
+
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3 class="test-name">CG C TEST 1</h3>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="test-details">
+                        <p><span>Type:</span> Mcq</p>
+                        <p><span>Time Limit:</span> 28 minutes</p>
+                        <p><span>Start Time:</span> Sep 11, 2025, 03:45 PM</p>
+                        <p><span>Duration:</span> 30 minutes</p>
+                        <p><span>Questions:</span> 0</p>
+                    </div>
+                    <button class="view-results-btn">View Results</button>
+                    <div class="test-card-footer">
+                        Started: 9/11/2025<br>
+                        Completed: 9/11/2025
+                    </div>
+                </div>
+
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3 class="test-name">CG HTML TEST 1</h3>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="test-details">
+                        <p><span>Type:</span> Theoretical</p>
+                        <p><span>Time Limit:</span> 30 minutes</p>
+                        <p><span>Start Time:</span> Sep 10, 2025, 03:50 PM</p>
+                        <p><span>Duration:</span> 30 minutes</p>
+                        <p><span>Questions:</span> 0</p>
+                    </div>
+                    <button class="view-results-btn">View Results</button>
+                    <div class="test-card-footer">
+                        Started: 9/10/2025<br>
+                        Completed: 9/10/2025
+                    </div>
+                </div>
+
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3 class="test-name">CG GIT Test 1</h3>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="test-details">
+                        <p><span>Type:</span> Mixed</p>
+                        <p><span>Time Limit:</span> 75 minutes</p>
+                        <p><span>Start Time:</span> Sep 9, 2025, 02:40 PM</p>
+                        <p><span>Duration:</span> 75 minutes</p>
+                        <p><span>Questions:</span> 0</p>
+                    </div>
+                    <button class="view-results-btn">View Results</button>
+                    <div class="test-card-footer">
+                        Started: 9/9/2025<br>
+                        Completed: 9/9/2025
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
