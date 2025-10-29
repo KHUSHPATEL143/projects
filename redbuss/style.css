@@ -17,8 +17,8 @@
       background: white;
       padding: 12px 5%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      /* justify-content: space-between; */
+      /* align-items: center; */
       box-shadow: 0 1px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
@@ -51,14 +51,25 @@
     .nav-links a:hover {
       color: #e31e25;
     }
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+      flex:start;
+      justify-content: start;
+    }
+
+
 
     /* Hero Banner */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1600x400?text=Hero+Image') no-repeat center center;
-      background-size: cover;
-      color: white;
-      padding: 60px 5% 40px;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.redbus.in/rails/public/images/banner.svg') no-repeat center center;
+      /* backgroundimg: url('https://www.redbus.in/rails/public/images/banner.svg'); */
+      /* background-size: cover; */
+      /* color: white; */
+      /* padding: 60px 5% 40px; */
       text-align: center;
+      height: 500px;
     }
 
     .hero h1 {
@@ -128,10 +139,11 @@
 
     .quick-date {
       padding: 8px 15px;
-      background: #ffebee;
+      background: #06187dff;
       border-radius: 20px;
       font-size: 12px;
       cursor: pointer;
+      color: black;
     }
 
     .booking-for-women {
