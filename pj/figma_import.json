@@ -1,0 +1,57 @@
+{
+  "project_name": "PJ Shoots - Figma Import (prototype)",
+  "frames": [
+    {
+      "name": "Home - Desktop",
+      "width": 1440,
+      "height": 1024,
+      "elements": [
+        "Hero",
+        "Services grid",
+        "Portfolio preview",
+        "Instagram feed",
+        "Footer"
+      ]
+    },
+    {
+      "name": "About - Desktop",
+      "width": 1440,
+      "height": 900,
+      "elements": [
+        "About text",
+        "Team photo",
+        "Why choose us"
+      ]
+    },
+    {
+      "name": "Services - Desktop",
+      "width": 1440,
+      "height": 900,
+      "elements": [
+        "Service cards",
+        "Booking CTA"
+      ]
+    },
+    {
+      "name": "Portfolio - Desktop",
+      "width": 1440,
+      "height": 1200,
+      "elements": [
+        "Gallery grid",
+        "Filters",
+        "Lightbox"
+      ]
+    },
+    {
+      "name": "Contact - Desktop",
+      "width": 1440,
+      "height": 800,
+      "elements": [
+        "Contact form",
+        "Map placeholder",
+        "Social links"
+      ]
+    }
+  ],
+  "notes": "This JSON is a simple descriptor to help import the structure into Figma via plugins like 'JSON to Figma' or for manual recreation. The HTML/CSS files provide the visual prototype."
+}
